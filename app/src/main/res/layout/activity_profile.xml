@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:text="German Pérez"
+            android:text="Kenjiro Aguilera"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="Desaparecido"
+            android:text="Desarrollador android "
             android:textColor="#666666"
             android:textSize="16sp" />
 
@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:text="german.perez@email.com"
+            android:text="k.aguilera20@alumnos.santotomas.com"
             android:textSize="14sp" />
 
         <TextView
@@ -56,13 +56,6 @@
             android:layout_height="wrap_content"
             android:text="Iquique, Chile"
             android:textSize="14sp" />
-
-        <Button
-            android:id="@+id/btnToProduct"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="Ver Producto" />
 
     </LinearLayout>
 
