@@ -34,7 +34,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:text="Desarrollador android "
-            android:textColor="#666666"
             android:textSize="16sp" />
 
         <TextView
