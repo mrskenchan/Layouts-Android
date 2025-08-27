@@ -5,40 +5,30 @@
     android:layout_width="match_parent"
              android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/XxImagenxX"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.129"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <TextView
         android:id="@+id/descripcion"
-        android:layout_width="281dp"
-        android:layout_height="60dp"
-        android:text="Telefono Android, gama Alta, 5G, Color a eleccion, 16GB RAM."
+        android:layout_width="319dp"
+        android:layout_height="143dp"
+        android:text="Papas, cortadas y listas para freír. Salchichas de Pollo Ahumada Tipo FRANKFURT de @productosdeldia. Salami, cortado en rodajas. Tocino (bacon), picado. Para la Salsa: Mayonesa. Ketchup. Mostaza."
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.306"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.394" />
+        app:layout_constraintVertical_bias="0.521" />
 
     <TextView
-        android:id="@+id/Nombre_Producto"
+        android:id="@+id/Nombre_perfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="iphone Galaxy S203"
+        android:text="Salchipapas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.324" />
+        app:layout_constraintVertical_bias="0.396" />
 
     <Button
         android:id="@+id/VerDatos"
@@ -47,41 +37,33 @@
         android:text="Contacto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintHorizontal_bias="0.759"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.611" />
-
-    <TextView
-        android:id="@+id/Titulo"
-        android:layout_width="153dp"
-        android:layout_height="36dp"
-        android:text="Vista del Producto"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.685" />
 
     <Button
         android:id="@+id/regresar"
-        android:layout_width="92dp"
-        android:layout_height="55dp"
+        android:layout_width="104dp"
+        android:layout_height="58dp"
         android:text="volver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintHorizontal_bias="0.097"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.683" />
 
-    <TextView
-        android:id="@+id/Valor"
-        android:layout_width="120dp"
-        android:layout_height="31dp"
-        android:text="precio: $20000"
+    <ImageView
+        android:id="@+id/salchipapas"
+        android:layout_width="416dp"
+        android:layout_height="274dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@drawable/emplatado_final_de_las_salchipapas" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
