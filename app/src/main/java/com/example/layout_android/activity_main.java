@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 
 public class activity_main extends AppCompatActivity {
 
+    //se declaran los campos para referenciar los botones
     private ImageButton btnSalchipapas, btnPastelChoclo, btnCazuela, btnCompartir;
 
     @Override
@@ -33,6 +34,7 @@ public class activity_main extends AppCompatActivity {
         btnCompartir = findViewById(R.id.btn_compartir);
     }
 
+    //agrupa la informacion de las funcionalidades de los botones
     private void setOnClickListeners() {
         //se le da la funcionalidad, en este caso te manda a una view o vista
         btnSalchipapas.setOnClickListener(new View.OnClickListener() {
