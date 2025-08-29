@@ -11,8 +11,11 @@ public class activity_main extends AppCompatActivity {
     private ImageButton btnSalchipapas, btnPastelChoclo, btnCazuela, btnCompartir;
 
     @Override
+    //se crea la actividad
     protected void onCreate(Bundle savedInstanceState) {
+        //se implementa la clase padre obligatoriamente
         super.onCreate(savedInstanceState);
+        //muestra el archivo main
         setContentView(R.layout.activity_main);
 
         // Inicializar las vistas
@@ -22,6 +25,7 @@ public class activity_main extends AppCompatActivity {
         setOnClickListeners();
     }
 
+    //inicia las vistas, las busca por id y debuelve la vista correspondiente
     private void initViews() {
         btnSalchipapas = findViewById(R.id.btn_salchipapas);
         btnPastelChoclo = findViewById(R.id.btn_pastel_choclo);
@@ -30,9 +34,11 @@ public class activity_main extends AppCompatActivity {
     }
 
     private void setOnClickListeners() {
+        //se le da la funcionalidad, en este caso te manda a una view o vista
         btnSalchipapas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //instancias un intent para navegar entre ambas activity
                 Intent intent = new Intent(activity_main.this, activity_salchi.class);
                 startActivity(intent);
             }
