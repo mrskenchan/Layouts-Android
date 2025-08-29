@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cardview_light_background"
-    tools:context=".PastelChocloActivity">
+    tools:context=".activity_pastel">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
         android:padding="16dp">
 
         <ImageView
-            android:id="@+id/iv_pastel_choclo"
+            android:id="@+id/im_pastelchoclo"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:src="@drawable/pastelchoclos"
@@ -24,7 +24,7 @@
 
         <!-- Titulo -->
         <TextView
-            android:id="@+id/tv_title_pastel_choclo"
+            android:id="@+id/Ti_pastelchoclo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Pastel de Choclo Casero"
@@ -37,7 +37,7 @@
 
         <!-- Descripción -->
         <TextView
-            android:id="@+id/tv_description_pastel_choclo"
+            android:id="@+id/descrip_pastelchoclo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="El pastel de choclo es un plato tradicional chileno que combina lo dulce del choclo tierno con el sabor salado del pino. Es perfecto para los días fríos y representa la esencia de la cocina campesina chilena.

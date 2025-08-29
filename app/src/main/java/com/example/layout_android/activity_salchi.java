@@ -1,3 +1,11 @@
 package com.example.layout_android;
-public class activity_salchi {
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class activity_salchi extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_pastel);
+    }
 }
