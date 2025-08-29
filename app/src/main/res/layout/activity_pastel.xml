@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+    tools:context=".PastelChocloActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/iv_pastel_choclo"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/pastelchoclos"
+            android:scaleType="centerCrop"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Titulo -->
+        <TextView
+            android:id="@+id/tv_title_pastel_choclo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pastel de Choclo Casero"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/cardview_dark_background"
+            android:textAlignment="center"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="serif" />
+
+        <!-- Descripción -->
+        <TextView
+            android:id="@+id/tv_description_pastel_choclo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="El pastel de choclo es un plato tradicional chileno que combina lo dulce del choclo tierno con el sabor salado del pino. Es perfecto para los días fríos y representa la esencia de la cocina campesina chilena.
+            \n\nIngredientes:\n• 8 choclos tiernos desgranados\n• 500g de pino (igual al de empanadas)\n• 4 trutros de pollo
+            \n• 2 huevos duros en rodajas\n• 100g de aceitunas negras\n• 1 taza de leche\n• 2 cucharadas de mantequilla\n• Azúcar flor para espolvorear
+            \n• Albahaca fresca\n• Sal y pimienta\n\nPreparación:\n1. Muele los granos de choclo con un poco de leche\n2. Cocina la mezcla con mantequilla hasta espesar
+            \n3. En una fuente, coloca una capa de pino\n4. Agrega los trutros de pollo, huevo y aceitunas\n5. Cubre con la pasta de choclo\n6. Espolvorea azúcar flor por encima
+            \n7. Hornea a 180°C por 30-40 minutos hasta dorar\n\n¡Un sabor que nos conecta con nuestras raíces!"
+            android:textSize="16sp"
+            android:textColor="@color/cardview_dark_background"
+            android:lineSpacingExtra="4dp"
+            android:justificationMode="inter_word"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Botón volver -->
+        <Button
+            android:id="@+id/btn_volver_pastel_choclo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Volver al Menú Principal"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp"
+            android:padding="16dp"
+            android:elevation="2dp" />
+
+    </LinearLayout>
+</ScrollView>
