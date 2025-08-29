@@ -16,7 +16,7 @@ public class activity_main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         //se implementa la clase padre obligatoriamente
         super.onCreate(savedInstanceState);
-        //muestra el archivo main
+        //muestra el archivo main   conecta ambos archivos
         setContentView(R.layout.activity_main);
 
         // Inicializar las vistas
@@ -26,7 +26,7 @@ public class activity_main extends AppCompatActivity {
         setOnClickListeners();
     }
 
-    //inicia las vistas, las busca por id y debuelve la vista correspondiente
+    //busca los botones por id y los guarda
     private void initViews() {
         btnSalchipapas = findViewById(R.id.btn_salchipapas);
         btnPastelChoclo = findViewById(R.id.btn_pastel_choclo);
@@ -34,7 +34,7 @@ public class activity_main extends AppCompatActivity {
         btnCompartir = findViewById(R.id.btn_compartir);
     }
 
-    //agrupa la informacion de las funcionalidades de los botones
+    //agrupa la informacion de las funcionalidades o actividades de los botones
     private void setOnClickListeners() {
         //se le da la funcionalidad, en este caso te manda a una view o vista
         btnSalchipapas.setOnClickListener(new View.OnClickListener() {

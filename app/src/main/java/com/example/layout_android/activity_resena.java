@@ -9,13 +9,18 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class activity_resena extends AppCompatActivity {
 
+    //declara los campos que referencia a los input
     private TextInputEditText nombre, correo, region, nombreReceta,
             ingredientes, etPreparacion;
+    //declara los campos que referencian a los botones
     private Button btnEnviar, btnVolver;
 
     @Override
+    //se crea la actividad
     protected void onCreate(Bundle savedInstanceState) {
+        //se implementa la clase padre obligatoriamente
         super.onCreate(savedInstanceState);
+        //vincula ambos archivos en el layout con el de java (este)
         setContentView(R.layout.activity_resena);
 
         // Inicializar vistas
@@ -25,6 +30,7 @@ public class activity_resena extends AppCompatActivity {
         setOnClickListeners();
     }
 
+    //busca los input y los botones por id y los guarda
     private void initViews() {
         nombre = findViewById(R.id.nombre);
         correo = findViewById(R.id.correo);
@@ -36,7 +42,9 @@ public class activity_resena extends AppCompatActivity {
         btnVolver = findViewById(R.id.btn_volver_formulario);
     }
 
+    //agrupa la informacion  de las fincionalidades o actividades de los botones
     private void setOnClickListeners() {
+        //se le da la funcionalidad
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +52,7 @@ public class activity_resena extends AppCompatActivity {
             }
         });
 
+        //se le da la funcionalidad
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,6 +61,7 @@ public class activity_resena extends AppCompatActivity {
         });
     }
 
+    //agrupa lo que
     private void enviarReceta() {
         // Validar campos obligatorios
         if (!validarCampos()) {
