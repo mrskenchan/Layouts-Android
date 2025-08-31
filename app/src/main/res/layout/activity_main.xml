@@ -158,5 +158,56 @@
             android:textAlignment="center"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="16dp" />
+        <!-- Iconos de Redes Sociales -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="8dp">
+
+            <!-- Instagram -->
+            <ImageButton
+                android:id="@+id/btn_instagram"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/ic_instagram_background"
+                android:src="@drawable/ic_instagram"
+                android:contentDescription="Instagram"
+                android:elevation="2dp" />
+
+            <!-- Facebook -->
+            <ImageButton
+                android:id="@+id/btn_facebook"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/ic_facebook_background"
+                android:src="@drawable/ic_facebook"
+                android:contentDescription="Facebook"
+                android:elevation="2dp" />
+
+            <!-- YouTube -->
+            <ImageButton
+                android:id="@+id/btn_youtube"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/ic_youtube_background"
+                android:src="@drawable/ic_youtube"
+                android:contentDescription="YouTube"
+                android:elevation="2dp" />
+
+        </LinearLayout>
+
+        <!-- Texto adicional -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Síguenos en nuestras redes"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:textColor="#666666" />
     </LinearLayout>
 </ScrollView>

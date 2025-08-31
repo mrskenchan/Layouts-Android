@@ -5,18 +5,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.net.Uri;
 
 public class activity_main extends AppCompatActivity {
 
     //se declaran los campos para referenciar los botones
     private ImageButton btnSalchipapas, btnPastelChoclo, btnCazuela, btnCompartir;
 
+    private ImageButton btnInstagram, btnFacebook, btnYoutube;
+
     @Override
     //se crea la actividad
     protected void onCreate(Bundle savedInstanceState) {
         //se implementa la clase padre obligatoriamente
         super.onCreate(savedInstanceState);
-        //muestra el archivo main   conecta ambos archivos
+
+        //muestra el archivo main conecta ambos archivos
         setContentView(R.layout.activity_main);
 
         // Inicializar las vistas
@@ -32,6 +36,10 @@ public class activity_main extends AppCompatActivity {
         btnPastelChoclo = findViewById(R.id.btn_pastel_choclo);
         btnCazuela = findViewById(R.id.btn_cazuela);
         btnCompartir = findViewById(R.id.btn_compartir);
+
+        btnInstagram = findViewById(R.id.btn_instagram);
+        btnFacebook = findViewById(R.id.btn_facebook);
+        btnYoutube = findViewById(R.id.btn_youtube);
     }
 
     //agrupa la informacion de las funcionalidades o actividades de los botones
@@ -69,5 +77,30 @@ public class activity_main extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnInstagram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://instagram.com"));
+                startActivity(intent);
+            }
+        });
+
+        btnFacebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://facebook.com"));
+                startActivity(intent);
+            }
+        });
+
+        btnYoutube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
+                startActivity(intent);
+            }
+        });
+
     }
 }
