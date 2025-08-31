@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_light_background"
+    android:background="@drawable/background_bandera"
     tools:context=".activity_cazuela">
 
     <LinearLayout
@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp">
-
         <ImageView
             android:id="@+id/im_cazuela"
             android:layout_width="match_parent"
@@ -30,7 +29,7 @@
             android:text="@string/Titulo_Cazuela"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="@color/cardview_dark_background"
+            android:textColor="#212121"
             android:textAlignment="center"
             android:layout_marginBottom="16dp"
             android:fontFamily="serif" />
@@ -42,7 +41,7 @@
             android:layout_height="wrap_content"
             android:text="@string/descripcion_cazuela"
             android:textSize="16sp"
-            android:textColor="@color/cardview_dark_background"
+            android:textColor="#212121"
             android:lineSpacingExtra="4dp"
             android:justificationMode="inter_word"
             android:layout_marginBottom="24dp" />

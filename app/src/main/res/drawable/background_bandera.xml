@@ -1,45 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Fondo base blanco -->
+    <!-- Fondo transparente -->
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#FFFFFF" />
+            <solid android:color="#00000000" />
         </shape>
     </item>
 
-    <!-- Franja azul izquierda -->
+    <!-- Línea horizontal superior azul (mitad izquierda) -->
     <item
-        android:width="50dp"
-        android:gravity="left">
+        android:left="0dp"
+        android:right="200dp"
+        android:top="0dp"
+        android:height="6dp">
         <shape android:shape="rectangle">
             <solid android:color="#0033A0" />
         </shape>
     </item>
 
-    <!-- Franja roja derecha -->
+    <!-- Línea horizontal superior roja (mitad derecha) -->
     <item
-        android:width="50dp"
-        android:gravity="right">
+        android:left="200dp"
+        android:right="0dp"
+        android:top="0dp"
+        android:height="6dp">
         <shape android:shape="rectangle">
             <solid android:color="#D32F2F" />
         </shape>
     </item>
 
-    <!-- Estrella blanca centrada -->
+    <!-- Línea horizontal inferior azul (mitad izquierda) -->
     <item
-        android:width="30dp"
-        android:height="30dp"
-        android:gravity="center">
-        <vector
-            android:width="40dp"
-            android:height="40dp"
-            android:viewportWidth="24"
-            android:viewportHeight="24">
-            <path
-                android:fillColor="#FFFFFF"
-                android:pathData="M12,2l3.09,6.26L22,9.27l-5,4.87 1.18,6.88L12,17.77l-6.18,3.25L7,14.14 2,9.27l6.91,-1.01L12,2z"/>
-        </vector>
+        android:left="0dp"
+        android:right="200dp"
+        android:bottom="8dp"
+        android:height="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#0033A0" />
+        </shape>
+    </item>
+
+    <!-- Línea horizontal inferior roja (mitad derecha) -->
+    <item
+        android:left="200dp"
+        android:right="0dp"
+        android:bottom="8dp"
+        android:height="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#D32F2F" />
+        </shape>
     </item>
 
 </layer-list>
