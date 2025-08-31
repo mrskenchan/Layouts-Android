@@ -27,7 +27,7 @@
             android:id="@+id/Ti_pastelchoclo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pastel de Choclo Casero"
+            android:text="@string/Titulo_Pastel"
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="@color/cardview_dark_background"
@@ -40,12 +40,7 @@
             android:id="@+id/descrip_pastelchoclo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="El pastel de choclo es un plato tradicional chileno que combina lo dulce del choclo tierno con el sabor salado del pino. Es perfecto para los días fríos y representa la esencia de la cocina campesina chilena.
-            \n\nIngredientes:\n• 8 choclos tiernos desgranados\n• 500g de pino (igual al de empanadas)\n• 4 trutros de pollo
-            \n• 2 huevos duros en rodajas\n• 100g de aceitunas negras\n• 1 taza de leche\n• 2 cucharadas de mantequilla\n• Azúcar flor para espolvorear
-            \n• Albahaca fresca\n• Sal y pimienta\n\nPreparación:\n1. Muele los granos de choclo con un poco de leche\n2. Cocina la mezcla con mantequilla hasta espesar
-            \n3. En una fuente, coloca una capa de pino\n4. Agrega los trutros de pollo, huevo y aceitunas\n5. Cubre con la pasta de choclo\n6. Espolvorea azúcar flor por encima
-            \n7. Hornea a 180°C por 30-40 minutos hasta dorar\n\n¡Un sabor que nos conecta con nuestras raíces!"
+            android:text="@string/descripcion_pastel"
             android:textSize="16sp"
             android:textColor="@color/cardview_dark_background"
             android:lineSpacingExtra="4dp"
@@ -57,7 +52,7 @@
             android:id="@+id/btn_volver_pastel_choclo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Volver al Menú Principal"
+            android:text="@string/btn_volverMenu"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"

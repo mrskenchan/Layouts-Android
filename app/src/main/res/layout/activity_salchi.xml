@@ -27,7 +27,7 @@
             android:id="@+id/Ti_salchipapa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Salchipapas"
+            android:text="@string/Titulo_Salchi"
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="@color/cardview_dark_background"
@@ -40,12 +40,7 @@
             android:id="@+id/descrip_salchi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Las salchipapas son una preparación popular en Chile, especialmente como comida callejera y familiar. Combina papas fritas doradas con salchichas, creando un plato sabroso y reconfortante que gusta a toda la familia.\n
-            \nIngredientes:\n• 6 papas medianas peladas\n• 6 salchichas tipo vienesa\n• 2 cucharadas de aceite vegetal
-            \n• Mayonesa\n• Ketchup\n• Mostaza\n• Palta en cubitos\n• Tomate picado\n• Cebollín cortado fino\n• Sal y pimienta
-            \n• Queso rallado (opcional)\n\nPreparación:\n1. Corta las papas en bastones gruesos\n2. Fríe las papas en aceite caliente hasta dorar
-            \n3. Corta las salchichas en rodajas\n4. Cocina las salchichas en una sartén hasta dorar\n5. Mezcla papas y salchichas en un plato\n6. Agrega los aderezos al gusto
-            \n7. Decora con palta, tomate y cebollín\n8. Sirve inmediatamente mientras esté caliente\n\n¡Un clásico de la comida rápida chilena que nunca pasa de moda!"
+            android:text="@string/descripcion_salchi"
             android:textSize="16sp"
             android:textColor="@color/cardview_dark_background"
             android:lineSpacingExtra="4dp"
@@ -57,7 +52,7 @@
             android:id="@+id/btn_volver_salchis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Volver al Menú Principal"
+            android:text="@string/btn_volverMenu"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"

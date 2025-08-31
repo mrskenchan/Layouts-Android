@@ -7,40 +7,43 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="lorem_ipsum">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
-        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
-        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
-        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
-        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
-        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
-        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
-        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
-        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
-        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
-        bibendum, vel congue leo egestas.\n\n
-        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
-        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
-        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
-        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
-        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
-        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
-        est.\n\n
-        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
-        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
-        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
-        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
-        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
-        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
-        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
-        convallis.\n\n
-        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
-        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
-        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
-        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
-        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
-        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    <!-- TITULOS -->
+    <string name="Titulo_Pastel">Pastel de Choclo Casero</string>
+    <string name="Titulo_Cazuela">Cazuela de Pollo Tradicional</string>
+    <string name="Titulo_Resena">Comparte tu Receta Chilena</string>
+    <string name="Titulo_Salchi">Salchipapas</string>
+
+    <!-- BOTONES -->
+    <string name="btn_volverMenu">Volver al Menú Principal</string>
+    <string name="btn_enviarReceta">Enviar Receta</string>
+    <!-- DESCRIPCIONES -->
+
+    <string name="descripcion_pastel">
+        El pastel de choclo es un plato tradicional chileno que combina lo dulce del choclo tierno con el sabor salado del pino. Es perfecto para los días fríos y representa la esencia de la cocina campesina chilena.
+            \n\nIngredientes:\n• 8 choclos tiernos desgranados\n• 500g de pino (igual al de empanadas)\n• 4 trutros de pollo
+            \n• 2 huevos duros en rodajas\n• 100g de aceitunas negras\n• 1 taza de leche\n• 2 cucharadas de mantequilla\n• Azúcar flor para espolvorear
+            \n• Albahaca fresca\n• Sal y pimienta\n\nPreparación:\n1. Muele los granos de choclo con un poco de leche\n2. Cocina la mezcla con mantequilla hasta espesar
+            \n3. En una fuente, coloca una capa de pino\n4. Agrega los trutros de pollo, huevo y aceitunas\n5. Cubre con la pasta de choclo\n6. Espolvorea azúcar flor por encima
+            \n7. Hornea a 180°C por 30-40 minutos hasta dorar\n\n¡Un sabor que nos conecta con nuestras raíces!
+    </string>
+    <string name="descripcion_salchi">
+        Las salchipapas son una preparación popular en Chile, especialmente como comida callejera y familiar. Combina papas fritas doradas con salchichas, creando un plato sabroso y reconfortante que gusta a toda la familia.\n
+            \nIngredientes:\n• 6 papas medianas peladas\n• 6 salchichas tipo vienesa\n• 2 cucharadas de aceite vegetal
+            \n• Mayonesa\n• Ketchup\n• Mostaza\n• Palta en cubitos\n• Tomate picado\n• Cebollín cortado fino\n• Sal y pimienta
+            \n• Queso rallado (opcional)\n\nPreparación:\n1. Corta las papas en bastones gruesos\n2. Fríe las papas en aceite caliente hasta dorar
+            \n3. Corta las salchichas en rodajas\n4. Cocina las salchichas en una sartén hasta dorar\n5. Mezcla papas y salchichas en un plato\n6. Agrega los aderezos al gusto
+            \n7. Decora con palta, tomate y cebollín\n8. Sirve inmediatamente mientras esté caliente\n\n¡Un clásico de la comida rápida chilena que nunca pasa de moda!
+    </string>
+    <string name="descripcion_cazuela">
+        La cazuela es uno de los platos más reconfortantes de la cocina chilena. Esta sopa sustanciosa combina carne tierna con verduras frescas, creando un caldo aromático y nutritivo perfecto para cualquier época del año.\n
+            \nIngredientes:
+            \n• 1 kg de pollo en trozos (o cordero)\n• 2 papas medianas cortadas en cubos\n• 1 zapallo camote en trozos\n• 2 choclos cortados en rodajas
+            \n• 1 taza de porotos verdes\n• 1 cebolla picada\n• 2 zanahorias en rodajas\n• Arroz cocido\n• Perejil y cilantro picado\n• Sal, pimienta y comino
+            \n• Agua o caldo de verduras\n\nPreparación:\n1. Dora el pollo en una olla grande con aceite\n2. Agrega la cebolla y sofríe hasta transparentar
+            \n3. Incorpora agua o caldo hasta cubrir\n4. Cocina a fuego lento por 45 minutos\n5. Añade todas las verduras según su tiempo de cocción
+            \n6. Sazona con sal, pimienta y comino\n7. Sirve caliente con arroz y hierbas frescas\n\n¡El alma de la cocina chilena en cada cucharada!
+    </string>
+    <string name="descripcion_resena">
+        ¡Ayúdanos a preservar las tradiciones culinarias de Chile compartiendo tu receta!
     </string>
 </resources>

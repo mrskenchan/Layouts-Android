@@ -27,7 +27,7 @@
             android:id="@+id/Ti_cazuela"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cazuela de Pollo Tradicional"
+            android:text="@string/Titulo_Cazuela"
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="@color/cardview_dark_background"
@@ -40,13 +40,7 @@
             android:id="@+id/descrip_cazuela"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="La cazuela es uno de los platos más reconfortantes de la cocina chilena. Esta sopa sustanciosa combina carne tierna con verduras frescas, creando un caldo aromático y nutritivo perfecto para cualquier época del año.\n
-            \nIngredientes:
-            \n• 1 kg de pollo en trozos (o cordero)\n• 2 papas medianas cortadas en cubos\n• 1 zapallo camote en trozos\n• 2 choclos cortados en rodajas
-            \n• 1 taza de porotos verdes\n• 1 cebolla picada\n• 2 zanahorias en rodajas\n• Arroz cocido\n• Perejil y cilantro picado\n• Sal, pimienta y comino
-            \n• Agua o caldo de verduras\n\nPreparación:\n1. Dora el pollo en una olla grande con aceite\n2. Agrega la cebolla y sofríe hasta transparentar
-            \n3. Incorpora agua o caldo hasta cubrir\n4. Cocina a fuego lento por 45 minutos\n5. Añade todas las verduras según su tiempo de cocción
-            \n6. Sazona con sal, pimienta y comino\n7. Sirve caliente con arroz y hierbas frescas\n\n¡El alma de la cocina chilena en cada cucharada!"
+            android:text="@string/descripcion_cazuela"
             android:textSize="16sp"
             android:textColor="@color/cardview_dark_background"
             android:lineSpacingExtra="4dp"
@@ -58,7 +52,7 @@
             android:id="@+id/btn_volver_cazuela"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Volver al Menú Principal"
+            android:text="@string/btn_volverMenu"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"
