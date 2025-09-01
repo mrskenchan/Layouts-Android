@@ -17,6 +17,8 @@
     <string name="btn_volverMenu">Volver al Menú Principal</string>
     <string name="btn_enviarReceta">Enviar Receta</string>
     <!-- DESCRIPCIONES -->
+    <string name="footer">Sabores de Chile  🇨🇱</string>
+    <string name="footerRRSS">Síguenos en nuestras redes</string>
 
     <string name="descripcion_pastel">
         El pastel de choclo es un plato tradicional chileno que combina lo dulce del choclo tierno con el sabor salado del pino. Es perfecto para los días fríos y representa la esencia de la cocina campesina chilena.
