@@ -97,7 +97,7 @@ public class activity_main extends AppCompatActivity {
         btnYoutube.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://youtu.be/APm2xGg-RjQ"));
                 startActivity(intent);
             }
         });
