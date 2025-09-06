@@ -1,36 +1,59 @@
 package com.example.layout_android;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import android.widget.ImageView;
+
 import com.google.android.material.textfield.TextInputEditText;
+
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
+
+import java.io.File;
 
 public class activity_resena extends AppCompatActivity {
 
-    //declara los campos que referencia a los input
+    // Inputs
     private TextInputEditText nombre, correo, region, nombreReceta,
             ingredientes, etPreparacion;
-    //declara los campos que referencian a los botones
-    private Button btnEnviar, btnVolver;
+
+    // Botones
+    private Button btnEnviar, btnVolver, btnFoto;
+
+    // ImageView para mostrar la foto
+    private ImageView imageView;
+
+    // Uri de la foto
+    private Uri photoUri;
+
+    // Launchers para cámara y permisos
+    private ActivityResultLauncher<Uri> takePictureLauncher;
+    private ActivityResultLauncher<String> requestPermissionLauncher;
 
     @Override
-    //se crea la actividad
     protected void onCreate(Bundle savedInstanceState) {
-        //se implementa la clase padre obligatoriamente
         super.onCreate(savedInstanceState);
-        //vincula ambos archivos en el layout con el de java (este)
         setContentView(R.layout.activity_resena);
 
         // Inicializar vistas
         initViews();
 
-        // Configurar listeners
+        // Configurar listeners de botones
         setOnClickListeners();
+
+        // Inicializar cámara
+        initCameraLaunchers();
     }
 
-    //busca los input y los botones por id y los guarda
     private void initViews() {
         nombre = findViewById(R.id.nombre);
         correo = findViewById(R.id.correo);
@@ -40,11 +63,11 @@ public class activity_resena extends AppCompatActivity {
         etPreparacion = findViewById(R.id.et_preparacion);
         btnEnviar = findViewById(R.id.btn_enviar_receta);
         btnVolver = findViewById(R.id.btn_volver_formulario);
+        btnFoto = findViewById(R.id.btn_Camara); // botón extra para la cámara
+        imageView = findViewById(R.id.Fotografia); // donde se muestra la foto
     }
 
-    //agrupa la informacion  de las fincionalidades o actividades de los botones
     private void setOnClickListeners() {
-        //se le da la funcionalidad
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,37 +75,81 @@ public class activity_resena extends AppCompatActivity {
             }
         });
 
-        //se le da la funcionalidad
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish(); // Cierra esta activity y vuelve a MainActivity
+                finish(); // Cierra esta activity
+            }
+        });
+
+        btnFoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tomarFoto();
             }
         });
     }
 
-    //agrupa lo que
+    private void initCameraLaunchers() {
+        // Launcher para tomar foto
+        takePictureLauncher = registerForActivityResult(
+                new ActivityResultContracts.TakePicture(),
+                new ActivityResultCallback<Boolean>() {
+                    @Override
+                    public void onActivityResult(Boolean success) {
+                        if (success) {
+                            imageView.setImageURI(photoUri);
+                        }
+                    }
+                }
+        );
+
+        // Launcher para pedir permisos
+        requestPermissionLauncher = registerForActivityResult(
+                new ActivityResultContracts.RequestPermission(),
+                new ActivityResultCallback<Boolean>() {
+                    @Override
+                    public void onActivityResult(Boolean isGranted) {
+                        if (isGranted) {
+                            abrirCamara();
+                        } else {
+                            Toast.makeText(activity_resena.this,
+                                    "Permiso de cámara denegado", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+        );
+    }
+
+    private void tomarFoto() {
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+            abrirCamara();
+        } else {
+            requestPermissionLauncher.launch(Manifest.permission.CAMERA);
+        }
+    }
+
+    private void abrirCamara() {
+        File foto = new File(getExternalFilesDir("Pictures"), "receta.jpg");
+        photoUri = FileProvider.getUriForFile(this,
+                getApplicationContext().getPackageName() + ".provider",
+                foto);
+
+        takePictureLauncher.launch(photoUri);
+    }
+
     private void enviarReceta() {
-        // Validar campos obligatorios
         if (!validarCampos()) {
             return;
         }
 
-        // Obtener los datos del formulario
         String nombreStr = nombre.getText().toString().trim();
-        String correoStr = correo.getText().toString().trim();
-        String regionStr = region.getText().toString().trim();
         String nombreRecetaStr = nombreReceta.getText().toString().trim();
-        String ingredientesStr = ingredientes.getText().toString().trim();
-        String preparacionStr = etPreparacion.getText().toString().trim();
 
-        // Aquí normalmente enviarías los datos a un servidor
-        // Por ahora, solo mostramos un mensaje de confirmación
+        Toast.makeText(this, "¡Gracias " + nombreStr + "! Tu receta '" +
+                nombreRecetaStr + "' ha sido enviada exitosamente.", Toast.LENGTH_LONG).show();
 
-        Toast.makeText(this, "¡Gracias " + nombreStr + "! Tu receta '" + nombreRecetaStr +
-                "' ha sido enviada exitosamente.", Toast.LENGTH_LONG).show();
-
-        // Limpiar el formulario
         limpiarFormulario();
     }
 
@@ -140,5 +207,6 @@ public class activity_resena extends AppCompatActivity {
         nombreReceta.setText("");
         ingredientes.setText("");
         etPreparacion.setText("");
+        imageView.setImageURI(null); // limpia la foto
     }
 }
