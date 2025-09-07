@@ -134,7 +134,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Botón enviar -->
+            <!-- Boton para iniciar la camara-->
             <Button
                 android:id="@+id/btn_Camara"
                 android:layout_width="match_parent"
@@ -142,7 +142,7 @@
                 android:backgroundTint="#0033A0"
                 android:text="Tomar Imagen" />
 
-            <!-- Botón volver -->
+            <!-- Lugar en el que se muestra la imagen -->
             <ImageView
                 android:id="@+id/Fotografia"
                 android:layout_width="match_parent"
@@ -151,6 +151,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"/>
 
+            <!-- Botón enviar -->
             <Button
                 android:id="@+id/btn_enviar_receta"
                 android:layout_width="match_parent"
@@ -164,6 +165,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+            <!-- Botón volver -->
             <Button
                 android:id="@+id/btn_volver_formulario"
                 android:layout_width="match_parent"
