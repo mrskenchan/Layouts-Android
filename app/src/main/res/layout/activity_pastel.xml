@@ -14,7 +14,7 @@
         android:padding="16dp">
 
         <ImageView
-            android:id="@+id/im_pastelchoclo"
+            android:id="@+id/fotoNorte"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:src="@drawable/pastelchoclos"
