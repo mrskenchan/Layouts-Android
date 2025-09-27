@@ -5,7 +5,7 @@ public class RegionContract {
 
     public static class RegionEntry {
         public static final String TABLE_NAME = "region";
-        public static final String COLUMN_ID = "id";
-        public static final String COLUMN_NAME = "nombre";
+        public static final String COLUMN_ID = "id"; //primary Key
+        public static final String COLUMN_NAME = "nombre";  // Varchar
     }
 }

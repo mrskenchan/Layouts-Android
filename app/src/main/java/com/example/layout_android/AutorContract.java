@@ -5,8 +5,8 @@ public class AutorContract {
 
     public static class AutorEntry {
         public static final String TABLE_NAME = "autor";
-        public static final String COLUMN_ID = "id";
-        public static final String COLUMN_NAME = "nombre";
-        public static final String COLUMN_GMAIL = "correo";
+        public static final String COLUMN_ID = "id"; //Primary Key
+        public static final String COLUMN_NAME = "nombre"; //Varchar
+        public static final String COLUMN_GMAIL = "correo"; //Varchar
     }
 }
