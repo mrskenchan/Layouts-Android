@@ -9,7 +9,7 @@ public class FoodContract {
         public static final String COLUMN_NAME = "nombre_receta";
         public static final String COLUMN_PREPARACION = "preparacion";
         public static final String COLUMN_RUTA = "fotoRuta";
-        public static final String COLUMN_IDAUTOR = "id_autor";
-        public static final String COLUMN_IDREGION = "id_region";
+        public static final String COLUMN_ID_AUTOR = "id_autor";
+        public static final String COLUMN_ID_REGION = "id_region";
     }
 }
