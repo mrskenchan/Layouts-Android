@@ -14,6 +14,10 @@
     <color name="background_main">#FAFAFA</color>
     <color name="background_card">#FFFFFF</color>
     <color name="background_overlay">#F5F5F5E6</color>
+    <color name="azul_pastel">#A7C7E7</color>
+    <color name="cafe_pastel">#D2B48C</color>
+    <color name="verde_sur">#A8D5BA</color>
+
 
     <!-- Colores de texto -->
     <color name="text_primary">#212121</color>
@@ -23,4 +27,5 @@
     <color name="divider">#BDBDBD</color>
     <color name="success">#4CAF50</color>
     <color name="warning">#FF9800</color>
+
 </resources>
