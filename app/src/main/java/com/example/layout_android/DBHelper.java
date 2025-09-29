@@ -4,8 +4,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper { //DEFINICION DE LAS CLASES
-    public static final int DATABASE_VERSION = 1:
-    public static final String DATABASE_NAME = "":
+    public static final int DATABASE_VERSION = 1;
+    public static final String DATABASE_NAME = "";
 
     private  static final String SQL_CREATE_ENTRIES =  //SENTENCIAS SQL
             "CREATE TABLE " + FoodContract,FoodEntry,TABLE_NAME + " (" +
