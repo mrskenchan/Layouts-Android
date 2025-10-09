@@ -1,4 +1,4 @@
-package com.example.layout_android;
+package com.example.layout_android.Contratos;
 
 public class RecipeIngredientContract {
     private RecipeIngredientContract(){}
