@@ -75,7 +75,7 @@
                     android:layout_marginTop="40dp"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/montaña" />
+                    app:srcCompat="@drawable/montana" />
 
 
             </LinearLayout>
