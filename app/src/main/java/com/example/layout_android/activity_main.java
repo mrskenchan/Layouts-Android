@@ -39,6 +39,7 @@ public class activity_main extends AppCompatActivity {
         btnPastelChoclo = findViewById(R.id.btn_pastel_choclo);
         btnCazuela = findViewById(R.id.btn_cazuela);
         btnCompartir = findViewById(R.id.btn_compartir);
+        btnVerRecetas = findViewById(R.id.btn_ver_recetas);
 
         btnInstagram = findViewById(R.id.btn_instagram);
         btnFacebook = findViewById(R.id.btn_facebook);
@@ -81,7 +82,6 @@ public class activity_main extends AppCompatActivity {
             }
         });
 
-        btnVerRecetas = findViewById(R.id.btn_ver_recetas);
         btnVerRecetas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

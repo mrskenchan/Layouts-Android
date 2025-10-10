@@ -3,6 +3,8 @@ package com.example.layout_android;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,6 +22,8 @@ public class ListaRecetasActivity extends AppCompatActivity{
     private RecetasAdapter adapter;
     private List<Receta> listaRecetas;
     private DBHelper dbHelper;
+    private Button btn_volver;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -34,6 +38,25 @@ public class ListaRecetasActivity extends AppCompatActivity{
 
         adapter = new RecetasAdapter(listaRecetas);
         recyclerView.setAdapter(adapter);
+
+        // Inicializar vistas
+        initViews();
+
+        // Configurar listeners
+        setOnClickListeners();
+    }
+    //se busca la id del boton para volver
+    private void initViews() {
+        btn_volver = findViewById(R.id.btn_volver_listado);
+    }
+
+    private void setOnClickListeners () {
+        btn_volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish(); // Cierra esta activity y vuelve a MainActivity
+            }
+        });
     }
 
     private List<Receta> obtenerRecetas(){
