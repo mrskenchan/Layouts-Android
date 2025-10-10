@@ -24,7 +24,6 @@ public class ListaRecetasActivity extends AppCompatActivity{
     private DBHelper dbHelper;
     private Button btn_volver;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -39,26 +38,23 @@ public class ListaRecetasActivity extends AppCompatActivity{
         adapter = new RecetasAdapter(listaRecetas);
         recyclerView.setAdapter(adapter);
 
-        // Inicializar vistas
+        //Inicializar vistas
         initViews();
 
-        // Configurar listeners
+        //Configurar listener
         setOnClickListeners();
     }
-    //se busca la id del boton para volver
-    private void initViews() {
-        btn_volver = findViewById(R.id.btn_volver_listado);
-    }
+
+    private void initViews() {btn_volver = findViewById(R.id.btn_volver_listado);}
 
     private void setOnClickListeners () {
         btn_volver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish(); // Cierra esta activity y vuelve a MainActivity
+                finish(); //cierra el activity y lo devuelve al mainActivity
             }
         });
     }
-
     private List<Receta> obtenerRecetas(){
         List<Receta> recetas = new ArrayList<>();
         SQLiteDatabase db = dbHelper.getReadableDatabase();
