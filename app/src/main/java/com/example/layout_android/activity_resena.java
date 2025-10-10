@@ -1,5 +1,11 @@
 package com.example.layout_android;
 
+import android.database.sqlite.SQLiteDatabase;
+import android.content.ContentValues;
+import com.example.layout_android.DBHelper;
+import com.example.layout_android.Contratos.FoodContract;
+import com.example.layout_android.adapters.RecetasAdapter;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -39,6 +45,9 @@ public class activity_resena extends AppCompatActivity {
     private ActivityResultLauncher<Uri> takePictureLauncher;
     private ActivityResultLauncher<String> requestPermissionLauncher;
 
+    //base de datos
+    private DBHelper dbHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +60,13 @@ public class activity_resena extends AppCompatActivity {
         setOnClickListeners();
 
         // Inicializar cámara
+        initCameraLaunchers();
+
+        dbHelper = new DBHelper(this); // inicializar DBHelper
+
+        // resto de inicializaciones...
+        initViews();
+        setOnClickListeners();
         initCameraLaunchers();
     }
 
@@ -145,12 +161,34 @@ public class activity_resena extends AppCompatActivity {
         }
 
         String nombreStr = nombre.getText().toString().trim();
+        String correoStr = correo.getText().toString().trim();
+        String regionStr = region.getText().toString().trim();
         String nombreRecetaStr = nombreReceta.getText().toString().trim();
+        String ingredientesStr = ingredientes.getText().toString().trim();
+        String preparacionStr = etPreparacion.getText().toString().trim();
 
-        Toast.makeText(this, "¡Gracias " + nombreStr + "! Tu receta '" +
-                nombreRecetaStr + "' ha sido enviada exitosamente.", Toast.LENGTH_LONG).show();
+        // Guardar en base de datos
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
 
-        limpiarFormulario();
+        ContentValues values = new ContentValues();
+        values.put(FoodContract.FoodEntry.COLUMN_NAME, nombreRecetaStr);
+        values.put(FoodContract.FoodEntry.COLUMN_PREPARACION, preparacionStr);
+        values.put(FoodContract.FoodEntry.COLUMN_RUTA, photoUri != null ? photoUri.toString() : null);
+
+        // Aquí puedes guardar también idAutor e idRegion si tienes esos datos o déjalos como NULL o 0
+        values.put(FoodContract.FoodEntry.COLUMN_ID_AUTOR, 0);
+        values.put(FoodContract.FoodEntry.COLUMN_ID_REGION, 0);
+
+        long newRowId = db.insert(FoodContract.FoodEntry.TABLE_NAME, null, values);
+
+        if (newRowId == -1) {
+            Toast.makeText(this, "Error al guardar la receta", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "¡Gracias " + nombreStr + "! Tu receta '" +
+                    nombreRecetaStr + "' ha sido guardada exitosamente.", Toast.LENGTH_LONG).show();
+
+            limpiarFormulario();
+        }
     }
 
     private boolean validarCampos() {
