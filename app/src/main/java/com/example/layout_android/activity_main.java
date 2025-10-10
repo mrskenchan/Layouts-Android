@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Button;
 import android.net.Uri;
 
 public class activity_main extends AppCompatActivity {
@@ -13,6 +14,8 @@ public class activity_main extends AppCompatActivity {
     private ImageButton btnSalchipapas, btnPastelChoclo, btnCazuela, btnCompartir;
 
     private ImageButton btnInstagram, btnFacebook, btnYoutube;
+
+    private Button btnVerRecetas;
 
     @Override
     //se crea la actividad
@@ -74,6 +77,16 @@ public class activity_main extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(activity_main.this, activity_resena.class);
+                startActivity(intent);
+            }
+        });
+
+        btnVerRecetas = findViewById(R.id.btn_ver_recetas);
+        btnVerRecetas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Redirigir a ListaRecetasActivity
+                Intent intent = new Intent(activity_main.this, ListaRecetasActivity.class);
                 startActivity(intent);
             }
         });

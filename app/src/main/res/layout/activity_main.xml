@@ -148,6 +148,19 @@
             </LinearLayout>
         </LinearLayout>
 
+        <Button
+            android:id="@+id/btn_ver_recetas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ver Listado de Recetas"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#0033A0"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
         <!-- Footer -->
         <TextView
             android:layout_width="match_parent"
@@ -160,11 +173,6 @@
             android:layout_marginBottom="16dp" />
 
         <!-- Iconos de Redes Sociales -->
-        <Button
-            android:id="@+id/btn_redireccion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
 
         <LinearLayout
             android:layout_width="match_parent"
