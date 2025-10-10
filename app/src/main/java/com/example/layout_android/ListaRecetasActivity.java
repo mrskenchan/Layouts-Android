@@ -42,7 +42,7 @@ public class ListaRecetasActivity extends AppCompatActivity{
 
         String[] columnas = {
                 FoodContract.FoodEntry.COLUMN_ID,
-                FoodContract.FoodEntry.TABLE_NAME,
+                FoodContract.FoodEntry.COLUMN_NAME,
                 FoodContract.FoodEntry.COLUMN_PREPARACION,
                 FoodContract.FoodEntry.COLUMN_RUTA,
                 FoodContract.FoodEntry.COLUMN_ID_AUTOR,
