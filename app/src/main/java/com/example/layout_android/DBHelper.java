@@ -6,17 +6,17 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.example.layout_android.Contratos.FoodContract;
 
 public class DBHelper extends SQLiteOpenHelper { //DEFINICION DE LAS CLASES
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 3;
     public static final String DATABASE_NAME = "FoodDatabase.db";
 
     private  static final String SQL_CREATE_ENTRIES =  //SENTENCIAS SQL
             "CREATE TABLE " + FoodContract.FoodEntry.TABLE_NAME + " (" +
-            FoodContract.FoodEntry.COLUMN_ID + " INTEGER PRIMARY KEY," +
-            FoodContract.FoodEntry.COLUMN_NAME + " TEXT," +
-            FoodContract.FoodEntry.COLUMN_PREPARACION + "TEXT, "+
-            FoodContract.FoodEntry.COLUMN_RUTA + "TEXT, " +
-            FoodContract.FoodEntry.COLUMN_ID_AUTOR + "INTEGER, "+
-            FoodContract.FoodEntry.COLUMN_ID_REGION + "INTEGER "+
+            FoodContract.FoodEntry.COLUMN_ID + " INTEGER PRIMARY KEY, " +
+            FoodContract.FoodEntry.COLUMN_NAME + " TEXT, " +
+            FoodContract.FoodEntry.COLUMN_PREPARACION + " TEXT, "+
+            FoodContract.FoodEntry.COLUMN_RUTA + " TEXT, " +
+            FoodContract.FoodEntry.COLUMN_ID_AUTOR + " INTEGER, "+
+            FoodContract.FoodEntry.COLUMN_ID_REGION + " INTEGER "+
             ");";
 
     private static final String SQL_DELETE_ENTRIES =
