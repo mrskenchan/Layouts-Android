@@ -25,7 +25,7 @@
 
     <!-- Botón volver -->
     <Button
-        android:id="@+id/btn_volver_pastel_choclo"
+        android:id="@+id/btn_volver_listado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
