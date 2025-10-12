@@ -25,6 +25,9 @@ import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class activity_resena extends AppCompatActivity {
 
@@ -147,7 +150,10 @@ public class activity_resena extends AppCompatActivity {
     }
 
     private void abrirCamara() {
-        File foto = new File(getExternalFilesDir("Pictures"), "receta.jpg");
+        // Generar nombres únicos para cada imagen y así evita la sobrescritura
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+        String fileName = "receta_" + timeStamp + ".jpg";
+        File foto = new File(getExternalFilesDir("Pictures"), fileName);
         photoUri = FileProvider.getUriForFile(this,
                 getApplicationContext().getPackageName() + ".provider",
                 foto);
@@ -191,6 +197,7 @@ public class activity_resena extends AppCompatActivity {
         }
     }
 
+    //validacion de los campos
     private boolean validarCampos() {
         String nombreStr = nombre.getText().toString().trim();
         String correoStr = correo.getText().toString().trim();
