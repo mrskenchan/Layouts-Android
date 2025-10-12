@@ -48,4 +48,10 @@
     <string name="descripcion_resena">
         ¡Ayúdanos a preservar las tradiciones culinarias de Chile compartiendo tu receta! 🇨🇱
     </string>
+    <string-array name="regiones">
+        <item>Norte</item>
+        <item>Centro</item>
+        <item>Sur</item>
+    </string-array>
+
 </resources>

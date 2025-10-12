@@ -1,5 +1,6 @@
 package com.example.layout_android;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -45,7 +46,9 @@ public class ListaRecetasActivity extends AppCompatActivity{
         adapter = new RecetasAdapter(listaRecetas, new RecetasAdapter.OnRecetaActionListener(){
             @Override
             public void onEditar(Receta receta, int position){
-                //logica editar
+                Intent intent = new Intent(ListaRecetasActivity.this, EditarRecetaActivity.class);
+                intent.putExtra("id_receta", receta.getId());
+                startActivity(intent);
             }
 
             @Override
