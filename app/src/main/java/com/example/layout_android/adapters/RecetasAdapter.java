@@ -2,6 +2,7 @@ package com.example.layout_android.adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.ImageView;
 import android.net.Uri;
@@ -16,15 +17,22 @@ import java.util.List;
 public class RecetasAdapter extends RecyclerView.Adapter<RecetasAdapter.ViewHolder> {
 
     private List<Receta> recetas;
+    private OnRecetaActionListener listener;
 
-    public RecetasAdapter(List<Receta> recetas){
+    public RecetasAdapter(List<Receta> recetas, OnRecetaActionListener listener){
         this.recetas = recetas;
+        this.listener = listener;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_receta, parent, false);
         return new ViewHolder(view);
+    }
+
+    public interface OnRecetaActionListener { //separar logica de eliminar y modificar del adapter
+        void onEditar (Receta receta, int position);
+        void onEliminar (Receta receta, int position);
     }
 
     @Override
@@ -47,6 +55,14 @@ public class RecetasAdapter extends RecyclerView.Adapter<RecetasAdapter.ViewHold
             holder.imagenReceta.setImageResource(R.mipmap.ic_launcher);
         }
 
+        holder.btnModificar.setOnClickListener(v ->{
+            if (listener != null) listener.onEditar(receta, position);
+        });
+
+        holder.btnEliminar.setOnClickListener(v ->{
+            if (listener != null) listener.onEliminar(receta, position);
+        });
+
         holder.btnVerDetalles.setOnClickListener(v -> {
             android.content.Intent intent = new android.content.Intent(v.getContext(), DetalleRecetaActivity.class);
             intent.putExtra("nombre", receta.getNombre());
@@ -66,6 +82,8 @@ public class RecetasAdapter extends RecyclerView.Adapter<RecetasAdapter.ViewHold
         TextView preparacionReceta;
         ImageView imagenReceta;
         android.widget.Button btnVerDetalles;
+        ImageButton btnModificar;
+        ImageButton btnEliminar;
 
         public ViewHolder(View itemView){
             super(itemView);
@@ -73,6 +91,9 @@ public class RecetasAdapter extends RecyclerView.Adapter<RecetasAdapter.ViewHold
             preparacionReceta = itemView.findViewById(R.id.preparacionReceta);
             imagenReceta = itemView.findViewById(R.id.imagenReceta);
             btnVerDetalles = itemView.findViewById(R.id.btnVerDetalles);
+            btnModificar = itemView.findViewById(R.id.btn_modificar);
+            btnEliminar = itemView.findViewById(R.id.btn_eliminar);
         }
     }
+
 }

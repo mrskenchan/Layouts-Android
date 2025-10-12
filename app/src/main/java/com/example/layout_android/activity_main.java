@@ -11,7 +11,7 @@ import android.net.Uri;
 public class activity_main extends AppCompatActivity {
 
     //se declaran los campos para referenciar los botones
-    private ImageButton btnSalchipapas, btnPastelChoclo, btnCazuela, btnCompartir;
+    private ImageButton btnNorte, btnCentro, btnSur, btnCompartir;
 
     private ImageButton btnInstagram, btnFacebook, btnYoutube;
 
@@ -35,9 +35,9 @@ public class activity_main extends AppCompatActivity {
 
     //busca los botones por id y los guarda
     private void initViews() {
-        btnSalchipapas = findViewById(R.id.btn_salchipapas);
-        btnPastelChoclo = findViewById(R.id.btn_pastel_choclo);
-        btnCazuela = findViewById(R.id.btn_cazuela);
+        btnNorte = findViewById(R.id.btn_norte);
+        btnCentro = findViewById(R.id.btn_centro);
+        btnSur = findViewById(R.id.btn_sur);
         btnCompartir = findViewById(R.id.btn_compartir);
         btnVerRecetas = findViewById(R.id.btn_ver_recetas);
 
@@ -49,27 +49,30 @@ public class activity_main extends AppCompatActivity {
     //agrupa la informacion de las funcionalidades o actividades de los botones
     private void setOnClickListeners() {
         //se le da la funcionalidad, en este caso te manda a una view o vista
-        btnSalchipapas.setOnClickListener(new View.OnClickListener() {
+        btnNorte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //instancias un intent para navegar entre ambas activity
-                Intent intent = new Intent(activity_main.this, activity_salchi.class);
+                Intent intent = new Intent(activity_main.this, ListaRecetasActivity.class);
+                intent.putExtra("id_region",1);
                 startActivity(intent);
             }
         });
 
-        btnPastelChoclo.setOnClickListener(new View.OnClickListener() {
+        btnCentro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity_main.this, activity_pastel.class);
+                Intent intent = new Intent(activity_main.this, ListaRecetasActivity.class);
+                intent.putExtra("id_region",2); //centro
                 startActivity(intent);
             }
         });
 
-        btnCazuela.setOnClickListener(new View.OnClickListener() {
+        btnSur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity_main.this, activity_cazuela.class);
+                Intent intent = new Intent(activity_main.this, ListaRecetasActivity.class);
+                intent.putExtra("id_region",3); //sur
                 startActivity(intent);
             }
         });

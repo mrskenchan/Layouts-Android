@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -31,13 +32,37 @@ public class ListaRecetasActivity extends AppCompatActivity{
 
         recyclerView = findViewById(R.id.recetasRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         dbHelper = new DBHelper(this);
-        listaRecetas = obtenerRecetas();
 
-        adapter = new RecetasAdapter(listaRecetas);
+        int idRegion = getIntent().getIntExtra("id_region",-1);
+
+        if (idRegion != -1){
+            listaRecetas = obtenerRecetasPorRegion(idRegion);
+        } else {
+            listaRecetas = obtenerRecetas();
+        }
+
+        adapter = new RecetasAdapter(listaRecetas, new RecetasAdapter.OnRecetaActionListener(){
+            @Override
+            public void onEditar(Receta receta, int position){
+                //logica editar
+            }
+
+            @Override
+            public void onEliminar(Receta receta, int position){
+                new AlertDialog.Builder(ListaRecetasActivity.this)
+                        .setTitle("Eliminar receta")
+                        .setMessage("¿Deseas eliminar esta receta?")
+                        .setPositiveButton("Eliminar", (dialog, which) -> {
+                            dbHelper.eliminarFood(receta.getId());
+                            listaRecetas.remove(position);
+                            adapter.notifyItemRemoved(position);
+                        })
+                        .setNegativeButton("Cancelar",null)
+                        .show();
+            }
+        });
         recyclerView.setAdapter(adapter);
-
         //Inicializar vistas
         initViews();
 
@@ -87,6 +112,43 @@ public class ListaRecetasActivity extends AppCompatActivity{
         }
         cursor.close();
 
+        return recetas;
+    }
+
+    private List<Receta> obtenerRecetasPorRegion(int idRegion){
+        List<Receta> recetas = new ArrayList<>();
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        String[] columnas = {
+                FoodContract.FoodEntry.COLUMN_ID,
+                FoodContract.FoodEntry.COLUMN_NAME,
+                FoodContract.FoodEntry.COLUMN_PREPARACION,
+                FoodContract.FoodEntry.COLUMN_RUTA,
+                FoodContract.FoodEntry.COLUMN_ID_AUTOR,
+                FoodContract.FoodEntry.COLUMN_ID_REGION
+        };
+        String selection = FoodContract.FoodEntry.COLUMN_ID_REGION + " = ?";
+        String[] selectionArgs = { String.valueOf(idRegion)};
+
+        Cursor cursor = db.query(
+                FoodContract.FoodEntry.TABLE_NAME,
+                columnas,
+                selection,
+                selectionArgs,
+                null, null, null
+        );
+
+        while (cursor.moveToNext()) {
+            Receta receta = new Receta();
+            receta.setId(cursor.getInt(cursor.getColumnIndexOrThrow(FoodContract.FoodEntry.COLUMN_ID)));
+            receta.setNombre(cursor.getString(cursor.getColumnIndexOrThrow(FoodContract.FoodEntry.COLUMN_NAME)));
+            receta.setPreparacion(cursor.getString(cursor.getColumnIndexOrThrow(FoodContract.FoodEntry.COLUMN_PREPARACION)));
+            receta.setFotoRuta(cursor.getString(cursor.getColumnIndexOrThrow(FoodContract.FoodEntry.COLUMN_RUTA)));
+            receta.setIdAutor(cursor.getInt(cursor.getColumnIndexOrThrow(FoodContract.FoodEntry.COLUMN_ID_AUTOR)));
+            receta.setIdRegion(cursor.getInt(cursor.getColumnIndexOrThrow(FoodContract.FoodEntry.COLUMN_ID_REGION)));
+            recetas.add(receta);
+        }
+        cursor.close();
         return recetas;
     }
 }

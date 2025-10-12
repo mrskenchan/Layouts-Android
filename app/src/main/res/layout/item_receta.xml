@@ -46,12 +46,43 @@
                 android:ellipsize="end"
                 android:textColor="#666666" />
 
-            <Button
-                android:id="@+id/btnVerDetalles"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ver detalles"
-                android:layout_marginTop="8dp" />
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="start">
+
+                <Button
+                    android:id="@+id/btnVerDetalles"
+                    android:layout_width="wrap_content"
+                    android:backgroundTint="#0033A0"
+                    android:layout_height="wrap_content"
+                    android:text="Ver detalles"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="1dp"/>
+
+                <ImageButton
+                    android:id="@+id/btn_modificar"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_editar"
+                    android:src="@drawable/ic_editar"
+                    android:layout_marginStart="8dp"/>
+
+                <ImageButton
+                    android:id="@+id/btn_eliminar"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_eliminar"
+                    android:src="@drawable/ic_eliminar"
+                    android:layout_marginStart="8dp"/>
+
+            </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
