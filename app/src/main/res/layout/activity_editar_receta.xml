@@ -3,6 +3,8 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@drawable/background_bandera"
+    android:paddingTop="24dp"
+    android:fitsSystemWindows="true"
     android:padding="16dp">
 
     <TextView

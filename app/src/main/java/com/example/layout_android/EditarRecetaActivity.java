@@ -33,15 +33,6 @@ public class EditarRecetaActivity extends AppCompatActivity {
         Intent intent = getIntent();
         recetaId = intent.getIntExtra("id_receta", -1);
 
-        if (recetaId != -1) {
-            Receta receta = dbHelper.getRecetaById(recetaId); // este metodo necesitas crearlo si no existe
-            editNombre.setText(receta.getNombre());
-            editPreparacion.setText(receta.getPreparacion());
-            // Puedes usar receta.getIdRegion() para setear el spinner
-            spinnerRegion.setSelection(receta.getIdRegion()-1); // suponiendo IDs consecutivos
-            idAutor = receta.getIdAutor();
-        }
-
         // Llena opciones del spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.regiones, android.R.layout.simple_spinner_item);
@@ -50,14 +41,27 @@ public class EditarRecetaActivity extends AppCompatActivity {
 
         btnGuardar.setOnClickListener(v -> {
             guardarCambios();
+            Intent inten = new Intent(EditarRecetaActivity.this, activity_main.class);
+            inten.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(inten);
             finish();
         });
+
+        if (recetaId != -1) {
+            Receta receta = dbHelper.getRecetaById(recetaId);
+            if (receta != null) { // verificar que exista la receta
+                editNombre.setText(receta.getNombre());
+                editPreparacion.setText(receta.getPreparacion());
+                spinnerRegion.setSelection(receta.getIdRegion()-1); // IDs 1,2,3 para Norte, Centro, Sur
+                idAutor = receta.getIdAutor();
+            }
+        }
     }
 
     private void guardarCambios() {
         String nuevoNombre = editNombre.getText().toString();
         String nuevaPreparacion = editPreparacion.getText().toString();
-        int nuevaRegion = spinnerRegion.getSelectedItemPosition() + 1; // Asegúrate del mapeo de IDs
+        int nuevaRegion = spinnerRegion.getSelectedItemPosition() + 1;
         dbHelper.actualizarFood(recetaId, nuevoNombre, nuevaPreparacion, "", idAutor, nuevaRegion);
     }
 }
