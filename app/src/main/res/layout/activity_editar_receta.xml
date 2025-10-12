@@ -2,7 +2,19 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="@drawable/background_bandera"
     android:padding="16dp">
+
+    <TextView
+        android:id="@+id/Ti_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editar Receta"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="serif" />
 
     <EditText
         android:id="@+id/editNombre"
