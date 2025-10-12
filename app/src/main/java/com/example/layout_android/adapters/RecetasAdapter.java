@@ -56,7 +56,7 @@ public class RecetasAdapter extends RecyclerView.Adapter<RecetasAdapter.ViewHold
         }
 
         holder.btnModificar.setOnClickListener(v ->{
-            if (listener != null) listener.onEditar(receta, position);
+            if (listener != null) listener.onEditar(receta, holder.getAdapterPosition());
         });
 
         holder.btnEliminar.setOnClickListener(v ->{
