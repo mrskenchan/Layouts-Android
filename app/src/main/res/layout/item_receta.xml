@@ -45,6 +45,13 @@
                 android:maxLines="2"
                 android:ellipsize="end"
                 android:textColor="#666666" />
+
+            <Button
+                android:id="@+id/btnVerDetalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver detalles"
+                android:layout_marginTop="8dp" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

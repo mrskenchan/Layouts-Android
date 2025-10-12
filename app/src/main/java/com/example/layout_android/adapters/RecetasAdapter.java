@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.layout_android.R;
 import com.example.layout_android.Receta;
+import com.example.layout_android.DetalleRecetaActivity;
 
 import java.util.List;
 
@@ -45,6 +46,14 @@ public class RecetasAdapter extends RecyclerView.Adapter<RecetasAdapter.ViewHold
         } else {
             holder.imagenReceta.setImageResource(R.mipmap.ic_launcher);
         }
+
+        holder.btnVerDetalles.setOnClickListener(v -> {
+            android.content.Intent intent = new android.content.Intent(v.getContext(), DetalleRecetaActivity.class);
+            intent.putExtra("nombre", receta.getNombre());
+            intent.putExtra("preparacion", receta.getPreparacion());
+            intent.putExtra("fotoRuta", receta.getFotoRuta());
+            v.getContext().startActivity(intent);
+        });
     }
 
     @Override
@@ -56,12 +65,14 @@ public class RecetasAdapter extends RecyclerView.Adapter<RecetasAdapter.ViewHold
         TextView nombreReceta;
         TextView preparacionReceta;
         ImageView imagenReceta;
+        android.widget.Button btnVerDetalles;
 
         public ViewHolder(View itemView){
             super(itemView);
             nombreReceta = itemView.findViewById(R.id.nombreReceta);
             preparacionReceta = itemView.findViewById(R.id.preparacionReceta);
             imagenReceta = itemView.findViewById(R.id.imagenReceta);
+            btnVerDetalles = itemView.findViewById(R.id.btnVerDetalles);
         }
     }
 }
