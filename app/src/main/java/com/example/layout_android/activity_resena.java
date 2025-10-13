@@ -150,7 +150,7 @@ public class activity_resena extends AppCompatActivity {
     }
 
     private void abrirCamara() {
-        // Generar nombres únicos para cada imagen y así evita la sobrescritura
+        // Genera nombres unicos a las imagenes para evitar la sobreescritura
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
         String fileName = "receta_" + timeStamp + ".jpg";
         File foto = new File(getExternalFilesDir("Pictures"), fileName);
@@ -181,7 +181,7 @@ public class activity_resena extends AppCompatActivity {
         values.put(FoodContract.FoodEntry.COLUMN_PREPARACION, preparacionStr);
         values.put(FoodContract.FoodEntry.COLUMN_RUTA, photoUri != null ? photoUri.toString() : null);
 
-        // Aquí puedes guardar también idAutor e idRegion si tienes esos datos o déjalos como NULL o 0
+        // Se genera un idAutor e idRegion o dejarlo NULL si es que no hay datos
         values.put(FoodContract.FoodEntry.COLUMN_ID_AUTOR, 0);
         values.put(FoodContract.FoodEntry.COLUMN_ID_REGION, 0);
 

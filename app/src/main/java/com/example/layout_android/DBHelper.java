@@ -40,7 +40,7 @@ public class DBHelper extends SQLiteOpenHelper { //DEFINICION DE LAS CLASES
         db.execSQL(SQL_DELETE_ENTRIES);
         onCreate(db);
     }
-    public int actualizarFood(int id, String nombre, String preparacion, String ruta, int idAutor, int idRegion) {   // METODO PARA ACTUALIZAR
+    public int actualizarFood(int id, String nombre, String preparacion, String ruta, int idAutor, int idRegion) {   // METODO PARA ACTUALIZAR RECETA
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues valores = new ContentValues();
         valores.put(FoodContract.FoodEntry.COLUMN_NAME, nombre);
@@ -62,7 +62,7 @@ public class DBHelper extends SQLiteOpenHelper { //DEFINICION DE LAS CLASES
         return db.delete(FoodContract.FoodEntry.TABLE_NAME, condicion, args); // RETOMAR EL DELETE
     }
 
-    public Receta getRecetaById(int id){ //metodo para modificar la receta por id
+    public Receta getRecetaById(int id){ //METODO PARA MODIFICAR POR ID
         SQLiteDatabase db = this.getReadableDatabase();
         String[] columnas = {
                 FoodContract.FoodEntry.COLUMN_ID,
