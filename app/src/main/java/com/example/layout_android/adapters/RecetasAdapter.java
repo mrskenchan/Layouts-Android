@@ -55,14 +55,17 @@ public class RecetasAdapter extends RecyclerView.Adapter<RecetasAdapter.ViewHold
             holder.imagenReceta.setImageResource(R.mipmap.ic_launcher);
         }
 
+        //Botón para modificar
         holder.btnModificar.setOnClickListener(v ->{
             if (listener != null) listener.onEditar(receta, holder.getAdapterPosition());
         });
 
+        //Botón para eliminar
         holder.btnEliminar.setOnClickListener(v ->{
             if (listener != null) listener.onEliminar(receta, position);
         });
 
+        //Botón para ver los detalles
         holder.btnVerDetalles.setOnClickListener(v -> {
             android.content.Intent intent = new android.content.Intent(v.getContext(), DetalleRecetaActivity.class);
             intent.putExtra("nombre", receta.getNombre());
