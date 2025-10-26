@@ -1,5 +1,10 @@
 # 🇨🇱 Recetario Chileno App
 
+Integrantes:
+- Kenjiro Aguilera
+- Cristóbal Gómez
+- Matías Ulloa
+
 Aplicación móvil para gestionar recetas tradicionales chilenas. Permite agregar, editar, eliminar y visualizar recetas de diversas zonas del país (norte, centro y sur), almacenando los datos localmente con SQLite.  
 
 ---
