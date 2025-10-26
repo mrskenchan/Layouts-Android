@@ -28,9 +28,12 @@ Aplicación móvil para gestionar recetas tradicionales chilenas. Permite agrega
 ---
 
 ## 🖼️ Capturas
+Menu de la aplicacion:
 <img width="200" height="806" alt="Captura de pantalla 2025-10-13 160315" src="https://github.com/user-attachments/assets/7e407dfe-6d31-43b1-aa4f-53f9afd0d941" />
-
-
+Agregar una receta:
+<img width="377" height="799" alt="Captura de pantalla 2025-10-13 160623" src="https://github.com/user-attachments/assets/a085288f-bf83-46cb-9e8e-3398954a3b14" />
+Ver todas las recetas:
+<img width="377" height="807" alt="Captura de pantalla 2025-10-13 160924" src="https://github.com/user-attachments/assets/9a2c1fcb-6548-416f-86e9-33dbd30973eb" />
 ---
 
 ## 🧩 Estructura del proyecto
