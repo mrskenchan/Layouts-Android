@@ -33,6 +33,7 @@ Aplicación móvil para gestionar recetas tradicionales chilenas. Permite agrega
 ---
 
 ## 🧩 Estructura del proyecto
+```
 📁 com.example.layout_android
 ┣ 📁 adapters
 ┃ ┗ 📄 RecetasAdapter.java
@@ -60,6 +61,7 @@ Aplicación móvil para gestionar recetas tradicionales chilenas. Permite agrega
 ┣ 📄 activity_main.xml
 ┣ 📄 activity_resena.xml
 ┗ 📄 item_receta.xml
+```
 ---
 
 ## ⚙️ Instalación
